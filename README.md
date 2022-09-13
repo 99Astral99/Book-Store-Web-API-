@@ -1,5 +1,5 @@
 
-# Book WebAPI
+# BookStore WebAPI
 
 This is a web application, in this case a bookstore, built on the .NET 6 platform.
 
