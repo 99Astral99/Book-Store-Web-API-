@@ -22,7 +22,7 @@ builder.Services.AddPersistence(builder.Configuration);
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("Allow all", policy =>
+    options.AddPolicy("AllowAll", policy =>
     {
         policy.AllowAnyHeader();
         policy.AllowAnyMethod();
