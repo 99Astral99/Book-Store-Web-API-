@@ -91,8 +91,8 @@ namespace BookStore.Persistence
             };
 
             PasswordHasher<User> ph = new PasswordHasher<User>();
-            user1.PasswordHash = ph.HashPassword(user1, "Customer123");
-            user2.PasswordHash = ph.HashPassword(user2, "Admin123");
+            user1.PasswordHash = ph.HashPassword(user1, "DefaultCustomerPassword111");
+            user2.PasswordHash = ph.HashPassword(user2, "DefaultAdminPassword111");
 
             builder.Entity<User>().HasData(user1);
             builder.Entity<User>().HasData(user2);
