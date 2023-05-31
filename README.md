@@ -21,11 +21,6 @@ This is a web application, in this case a bookstore, built on the .NET 6 platfor
 ## What does it do?
 This is a highly scalable application which allows you to add/get/update/delete a book entity by working directly with the database.
 
-## How to use it?
-- Download code
-- On the PM console write "update-database" command so seeding can work properly
-- Enjoy :)
-
 ## Architecture
 
 The application is divided into several projects, namely:
