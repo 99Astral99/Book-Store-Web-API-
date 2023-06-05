@@ -29,7 +29,7 @@ namespace BookStoreWebApi.Controllers
 		}
 
 		[HttpPost("login")]
-		public async Task<ActionResult<AuthResponse>> Authenticate([FromBody] AuthRequest request)
+		public async Task<ActionResult<AuthResponse>> Login([FromBody] AuthRequest request)
 		{
 			if (!ModelState.IsValid)
 			{
@@ -85,7 +85,6 @@ namespace BookStoreWebApi.Controllers
 				MiddleName = request.MiddleName,
 				Email = request.Email,
 				UserName = request.UserName
-				//request.Email
 			};
 			var result = await _userManager.CreateAsync(user, request.Password);
 
@@ -102,7 +101,7 @@ namespace BookStoreWebApi.Controllers
 
 			await _userManager.AddToRoleAsync(findUser, RoleConsts.Customer);
 
-			return await Authenticate(new AuthRequest
+			return await Login(new AuthRequest
 			{
 				Email = request.Email,
 				Password = request.Password
@@ -135,7 +134,7 @@ namespace BookStoreWebApi.Controllers
 				return BadRequest("Invalid access token or refresh token");
 			}
 
-			var newAccessToken = _configuration.CreateToken(principal.Claims.ToList());
+			var newAccessToken = _configuration.CreateNewToken(principal.Claims.ToList());
 			var newRefreshToken = _configuration.GenerateRefreshToken();
 
 			user.RefreshToken = newRefreshToken;

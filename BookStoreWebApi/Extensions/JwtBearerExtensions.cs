@@ -48,7 +48,7 @@ namespace BookStoreWebApi.Extensions
 			);
 		}
 
-		public static JwtSecurityToken CreateToken(this IConfiguration configuration, List<Claim> authClaims)
+		public static JwtSecurityToken CreateNewToken(this IConfiguration configuration, List<Claim> authClaims)
 		{
 			var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Secret"]!));
 			var tokenValidityInMinutes = configuration.GetSection("Jwt:TokenValidityInMinutes").Get<int>();

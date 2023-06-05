@@ -17,7 +17,8 @@ namespace BookStoreWebApi.Controllers
 		private readonly IMapper _mapper;
 		public BookStoreController(IMapper mapper) =>
 			_mapper = mapper;
-		
+
+		[Authorize]
 		[HttpGet]
 		public async Task<ActionResult<BookListVm>> GetAll()
 		{
