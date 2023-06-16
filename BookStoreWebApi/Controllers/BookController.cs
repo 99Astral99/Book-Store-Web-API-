@@ -10,15 +10,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BookStoreWebApi.Controllers
 {
+	[ApiController]
 	[Authorize]
 	[Route("api/[controller]")]
-	public class BookStoreController : BaseController
+	public class BookController : BaseController
 	{
 		private readonly IMapper _mapper;
-		public BookStoreController(IMapper mapper) =>
+		public BookController(IMapper mapper) =>
 			_mapper = mapper;
 
-		[Authorize]
+
 		[HttpGet]
 		public async Task<ActionResult<BookListVm>> GetAll()
 		{

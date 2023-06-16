@@ -109,7 +109,14 @@ builder.Services.AddCors(options =>
         policy.AllowAnyHeader();
         policy.AllowCredentials();
         policy.AllowAnyMethod();
-        policy.WithOrigins(builder.Configuration.GetSection("Cors:Urls").Get<string[]>()!);
+        policy.WithOrigins(builder.Configuration.GetSection("CORS:Urls").Get<string[]>()!);
+    });
+
+    options.AddPolicy("Free", policy =>
+    {
+        policy.AllowAnyHeader();
+        policy.AllowCredentials();
+        policy.AllowAnyMethod();
     });
 });
 
