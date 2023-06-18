@@ -6,7 +6,7 @@ This is a web application, in this case a bookstore, built on the .NET 6 platfor
 ## Tech stack
 
 ### Server
-- .NET 6 WebAPI
+- .NET 7 WebAPI
 - MSSQL
 - Entity Framework Core
 
