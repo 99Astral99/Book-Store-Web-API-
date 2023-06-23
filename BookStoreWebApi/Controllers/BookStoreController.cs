@@ -11,12 +11,12 @@ using Microsoft.AspNetCore.Mvc;
 namespace BookStoreWebApi.Controllers
 {
 	[ApiController]
-	[Authorize]
+	//[Authorize]
 	[Route("api/[controller]")]
-	public class BookController : BaseController
+	public class BookStoreController : BaseController
 	{
 		private readonly IMapper _mapper;
-		public BookController(IMapper mapper) =>
+		public BookStoreController(IMapper mapper) =>
 			_mapper = mapper;
 
 

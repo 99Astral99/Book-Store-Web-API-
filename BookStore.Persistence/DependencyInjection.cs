@@ -1,6 +1,4 @@
 ﻿using BookStore.Application.Interfaces;
-using BookStore.Domain;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,10 +11,18 @@ namespace BookStore.Persistence
 			this IServiceCollection services,
 			IConfiguration configuration)
 		{
-			var connectionString = configuration["DbConnection"];
+
+			var dbHost = Environment.GetEnvironmentVariable("POSTGRES_HOST");
+			var dbUser = Environment.GetEnvironmentVariable("POSTGRES_USER");
+			var dbPassword = Environment.GetEnvironmentVariable("POSTGRES_PASSWORD");
+			var dbName = Environment.GetEnvironmentVariable("POSTGRES_DB");
+			var connectionString = $"Host={dbHost};User Id={dbUser};Password={dbPassword};Port=5432;Database={dbName}";
+			//local connection string:
+			//var connectionString = "Host = localhost; Port = 5432; Database = BookStoreDb; Username = postgres; Password = master";
+
 			services.AddDbContext<BookStoreDbContext>(options =>
 			{
-				options.UseSqlServer(connectionString, m =>
+				options.UseNpgsql(connectionString, m =>
 				m.MigrationsAssembly("BookStore.Persistence"));
 			});
 

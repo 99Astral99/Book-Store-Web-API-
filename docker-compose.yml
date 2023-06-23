@@ -1,0 +1,33 @@
+version: "3.4"
+networks:
+  backend:
+   
+services:
+  bookstorewebapi: 
+    container_name: book-store-api
+    image: ${DOCKER_REGISTRY-}bookstorewebapi
+    build:
+      context: .
+      dockerfile: BookStoreWebApi/Dockerfile
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: master
+      POSTGRES_DB: BookStoreDb
+      POSTGRES_HOST: postgres_db
+    ports:
+    - 8001:80 
+    depends_on:
+    - postgres_db
+    networks:
+    - backend
+  postgres_db:
+    container_name: postgres-db
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    networks:
+      - backend
+    volumes:
+       - postgres-data:/var/lib/postgresql/data
+volumes:
+  postgres-data:

@@ -9,13 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{23B6624C-BBA8-4ABB-9AA8-66631AA3909E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Domain", "BookStore.Domain\BookStore.Domain.csproj", "{0206C5FC-FA8F-4DCD-AEE8-C5D5C43B489C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Domain", "BookStore.Domain\BookStore.Domain.csproj", "{0206C5FC-FA8F-4DCD-AEE8-C5D5C43B489C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Application", "BookStore.Application\BookStore.Application.csproj", "{136C3A96-9057-4400-9411-028D7BC9A622}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Application", "BookStore.Application\BookStore.Application.csproj", "{136C3A96-9057-4400-9411-028D7BC9A622}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Persistence", "BookStore.Persistence\BookStore.Persistence.csproj", "{733F42F5-1E15-47E3-B79D-93CC2BF7C136}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Persistence", "BookStore.Persistence\BookStore.Persistence.csproj", "{733F42F5-1E15-47E3-B79D-93CC2BF7C136}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreWebApi", "BookStoreWebApi\BookStoreWebApi.csproj", "{6184370F-9D28-4F3F-8ACC-C9FDEC5C6564}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStoreWebApi", "BookStoreWebApi\BookStoreWebApi.csproj", "{6184370F-9D28-4F3F-8ACC-C9FDEC5C6564}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{117B09C2-2B03-4B03-ADC5-F5AE66FF9792}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{6184370F-9D28-4F3F-8ACC-C9FDEC5C6564}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6184370F-9D28-4F3F-8ACC-C9FDEC5C6564}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6184370F-9D28-4F3F-8ACC-C9FDEC5C6564}.Release|Any CPU.Build.0 = Release|Any CPU
+		{117B09C2-2B03-4B03-ADC5-F5AE66FF9792}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{117B09C2-2B03-4B03-ADC5-F5AE66FF9792}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{117B09C2-2B03-4B03-ADC5-F5AE66FF9792}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{117B09C2-2B03-4B03-ADC5-F5AE66FF9792}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
