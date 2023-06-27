@@ -20,6 +20,14 @@ services:
     - postgres_db
     networks:
     - backend
+
+  proxy:
+    image: nginx:latest
+    container_name: nginx
+    networks:
+      - backend
+
+
   postgres_db:
     container_name: postgres-db
     image: postgres:latest
