@@ -54,6 +54,7 @@ builder.Services.AddAutoMapper(config =>
 
 builder.Services.AddApplication();
 builder.Services.AddPersistence(builder.Configuration);
+builder.Services.AddHealthChecks();
 
 builder.Services.AddAuthentication(opt =>
 {
@@ -146,6 +147,7 @@ app.UseHttpsRedirection();
 app.UseCors("Safe");
 
 app.MapControllers();
+app.MapHealthChecks("/_health");
 
 app.UseAuthentication();
 app.UseAuthorization();
