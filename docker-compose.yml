@@ -24,6 +24,8 @@ services:
   proxy:
     image: nginx:latest
     container_name: nginx
+    depends_on:
+    - bookstorewebapi
     networks:
       - backend
 
