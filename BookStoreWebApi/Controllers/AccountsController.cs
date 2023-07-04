@@ -10,6 +10,7 @@ using System.IdentityModel.Tokens.Jwt;
 
 namespace BookStoreWebApi.Controllers
 {
+	[AllowAnonymous]
 	[ApiController]
 	[Route("api/[controller]")]
 	public class AccountsController : BaseController
