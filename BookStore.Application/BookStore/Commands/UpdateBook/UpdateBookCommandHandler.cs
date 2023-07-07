@@ -6,12 +6,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BookStore.Application.BookStore.Commands.UpdateBook
 {
-    public class UpdateNoteCommandHandler
+    public class UpdateBookCommandHandler
             : IRequestHandler<UpdateBookCommand>
     {
         private readonly IBookStoreDbContext _dbContext;
 
-        public UpdateNoteCommandHandler(IBookStoreDbContext dbContext) =>
+        public UpdateBookCommandHandler(IBookStoreDbContext dbContext) =>
             _dbContext = dbContext;
 
         public async Task<Unit> Handle(UpdateBookCommand request,
