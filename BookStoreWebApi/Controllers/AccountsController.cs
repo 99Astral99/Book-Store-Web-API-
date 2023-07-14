@@ -81,9 +81,6 @@ namespace BookStoreWebApi.Controllers
 
 			var user = new User
 			{
-				FirstName = request.FirstName,
-				LastName = request.LastName,
-				MiddleName = request.MiddleName,
 				Email = request.Email,
 				UserName = request.UserName
 			};

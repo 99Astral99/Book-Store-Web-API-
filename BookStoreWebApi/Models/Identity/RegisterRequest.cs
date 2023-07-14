@@ -23,17 +23,6 @@ namespace BookStoreWebApi.Models.Identity
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]
         public string PasswordConfirm { get; set; } = null!;
-
-        [Required]
-        [Display(Name = "First Name")]
-        public string FirstName { get; set; } = null!;
-
-        [Required]
-        [Display(Name = "Last Name")]
-        public string LastName { get; set; } = null!;
-
-        [Display(Name = "Middle Name")]
-        public string? MiddleName { get; set; }
     }
 }
 

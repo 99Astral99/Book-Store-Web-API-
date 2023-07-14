@@ -71,9 +71,6 @@ namespace BookStore.Persistence
                 Id = new Guid("A4A67768-DEDA-43BC-A545-A67D1ABDA650"),
                 Email = "customer@gmail.com",
                 EmailConfirmed = true,
-                FirstName = "Dante",
-                LastName = "Sparda",
-                MiddleName = "Spardovich",
                 UserName = "Customer111",
                 NormalizedUserName = "CUSTOMER111",
             };
@@ -83,9 +80,6 @@ namespace BookStore.Persistence
                 Id = new Guid("12539B7B-B1E6-4A04-BE98-6921487CAEF3"),
                 Email = "admin@gmail.com",
                 EmailConfirmed = true,
-                FirstName = "Vergil",
-                LastName = "Sparda",
-                MiddleName = "Spardovich",
                 UserName = "Admin111",
                 NormalizedUserName = "ADMIN111",
             };
