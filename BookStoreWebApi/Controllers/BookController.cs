@@ -25,6 +25,8 @@ namespace BookStoreWebApi.Controllers
 		{
 			var query = new GetBookListQuery();
 			var vm = await Mediator.Send(query);
+			_logger.LogInformation($"GetAll book");
+			_logger.LogInformation($"GetAll book");
 			return Ok(vm);
 		}
 	
